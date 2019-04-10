@@ -17,7 +17,7 @@
             <div class="col-md-6">
                 <form action="#" method="post" style="margin-bottom: 200px;">
                     <div style="margin: 50px 0;">
-                        <label for="textarea-input"><strong>Insérer le code de la classe PHP du formulaire Symfony ici :</strong></label>
+                        <label for="textarea-input"><strong>Insérer le code PHP de la classe du formulaire Symfony ici :</strong></label>
                         <textarea placeholder="<?php
 
 namespace App\Form;
@@ -27,7 +27,7 @@ namespace App\Form;
                         <div class="row">
                             <div class="col-md-6">
                                 <div style="margin: 5px 0;">
-                                    <strong>Nombre de champ du formulaire par ligne :</strong>
+                                    <strong>Nombre de champs du formulaire par ligne :</strong>
                                 </div>
 
                                 <div style="margin: 5px 0;">
@@ -44,23 +44,23 @@ namespace App\Form;
                             </div>
                             <div class="col-md-6">
                                 <div style="margin: 5px 0;">
-                                    <strong>Point de rupture responsive du champ :</strong>
+                                    <strong>Breakpoint responsive des champs :</strong>
                                 </div>
 
                                 <div style="margin: 5px 0;">
-                                    <input type="radio" name="responsiveBreakpoint" value="lg" id="responsiveBreakpoint1" /> <label for="responsiveBreakpoint1">lg</label>
+                                    <input type="radio" name="responsiveBreakpoint" value="lg" id="responsiveBreakpoint1" /> <label for="responsiveBreakpoint1">"lg" (breakpoint à 992px)</label>
                                 </div>
 
                                 <div style="margin: 5px 0;">
-                                    <input type="radio" name="responsiveBreakpoint" value="md" id="responsiveBreakpoint2" checked="checked" /> <label for="responsiveBreakpoint2">md</label>
+                                    <input type="radio" name="responsiveBreakpoint" value="md" id="responsiveBreakpoint2" checked="checked" /> <label for="responsiveBreakpoint2">"md" (breakpoint à 768px)</label>
                                 </div>
 
                                 <div style="margin: 5px 0;">
-                                    <input type="radio" name="responsiveBreakpoint" value="sm" id="responsiveBreakpoint3" /> <label for="responsiveBreakpoint3">sm</label>
+                                    <input type="radio" name="responsiveBreakpoint" value="sm" id="responsiveBreakpoint3" /> <label for="responsiveBreakpoint3">"sm" (breakpoint à 576px)</label>
                                 </div>
 
                                 <div style="margin: 5px 0;">
-                                    <input type="radio" name="responsiveBreakpoint" value="" id="responsiveBreakpoint4" /> <label for="responsiveBreakpoint4">toujours à la taille choisie (même sur mobile)</label>
+                                    <input type="radio" name="responsiveBreakpoint" value="" id="responsiveBreakpoint4" /> <label for="responsiveBreakpoint4">jamais (pas de breakpoint)</label>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ namespace App\Form;
 
                     <div class="row">
                         <div class="col-6">
-                            <button class="btn btn-secondary" type="button" id="erase-php-class">Remettre à zéro</button>
+                            <button class="btn btn-secondary" type="button" id="erase-php-class">Tout réinitialiser</button>
                         </div>
                         <div class="col-6 text-right">
                             <button class="btn btn-primary" type="submit">Obtenir mon formulaire Twig</button>
@@ -85,7 +85,7 @@ namespace App\Form;
                     </div>
 
                     <code style="display: block;overflow: auto;height: 200px;border-radius: 4px;border: 1px solid #333;padding: 20px;margin-bottom: 50px;" id="output">
-                        <pre id="copyTarget">Veuillez entrer une classe de formulaire Symfony<br>dans la colonne de gauche, puis validez.</pre>
+                        <pre id="copyTarget">Veuillez entrer une classe de formulaire PHP Symfony<br>dans la colonne de gauche, puis validez.</pre>
                     </code>
 
                     <div class="text-right">

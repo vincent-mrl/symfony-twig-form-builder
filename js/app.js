@@ -35,6 +35,8 @@ function outputTwigFormFromFormClass(formClassCode){
 
     myTwigForm += '{{ form_start(form) }}\n';
 
+    myTwigForm += '\n<div class="row">\n';
+
     $.each(arrayOfLines, function(index, textareaLine) {
         var parts = textareaLine.split("->add('");
         var formFieldToAdd = '';
@@ -48,6 +50,7 @@ function outputTwigFormFromFormClass(formClassCode){
         }
     });
 
+    myTwigForm += '</div>\n\n'; // Close Bootstrap's row
     myTwigForm += '{{ form_end(form) }}\n';
 
     $('#output pre').text(myTwigForm);
