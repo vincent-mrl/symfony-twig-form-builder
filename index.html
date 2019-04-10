@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Builder</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-top: 50px;">Outil de construction de formulaire Twig sur Symfony</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <form action="#" method="post" style="margin-bottom: 200px;">
+                    <div style="margin: 50px 0;">
+                        <label for="textarea-input"><strong>Insérer le code de la classe PHP du formulaire Symfony ici :</strong></label>
+                        <textarea placeholder="<?php
+
+namespace App\Form;
+
+... etc" class="form-control" style="min-height: 200px;margin-bottom: 20px;" required id="textarea-input"></textarea>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div style="margin: 5px 0;">
+                                    <strong>Nombre de champ du formulaire par ligne :</strong>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="colNumberPerRow" value="1" id="colNumberPerRow1" checked="checked" /> <label for="colNumberPerRow1">1 par ligne</label>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="colNumberPerRow" value="2" id="colNumberPerRow2" /> <label for="colNumberPerRow2">2 par ligne</label>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="colNumberPerRow" value="3" id="colNumberPerRow3" /> <label for="colNumberPerRow3">3 par ligne</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="margin: 5px 0;">
+                                    <strong>Point de rupture responsive du champ :</strong>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="responsiveBreakpoint" value="lg" id="responsiveBreakpoint1" /> <label for="responsiveBreakpoint1">lg</label>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="responsiveBreakpoint" value="md" id="responsiveBreakpoint2" checked="checked" /> <label for="responsiveBreakpoint2">md</label>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="responsiveBreakpoint" value="sm" id="responsiveBreakpoint3" /> <label for="responsiveBreakpoint3">sm</label>
+                                </div>
+
+                                <div style="margin: 5px 0;">
+                                    <input type="radio" name="responsiveBreakpoint" value="" id="responsiveBreakpoint4" /> <label for="responsiveBreakpoint4">toujours à la taille choisie (même sur mobile)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-secondary" type="button" id="erase-php-class">Remettre à zéro</button>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button class="btn btn-primary" type="submit">Obtenir mon formulaire Twig</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div style="margin-top: 50px;">
+                    <div class="row">
+                        <div class="col-12" style="margin-bottom: 0.5em">
+                            <strong>Résultat Twig du formulaire :</strong>
+                        </div>
+                    </div>
+
+                    <code style="display: block;overflow: auto;height: 200px;border-radius: 4px;border: 1px solid #333;padding: 20px;margin-bottom: 50px;" id="output">
+                        <pre id="copyTarget">Veuillez entrer une classe de formulaire Symfony<br>dans la colonne de gauche, puis validez.</pre>
+                    </code>
+
+                    <div class="text-right">
+                        <button type="button" class="btn btn-primary" id="copy-to-clipboard" style="display: none;">Copier le code du formulaire Twig</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
